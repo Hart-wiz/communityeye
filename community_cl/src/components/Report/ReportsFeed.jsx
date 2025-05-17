@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 
 const reports = [
   {
@@ -18,6 +19,8 @@ const ReportsFeed = () => {
   const [filter, setFilter] = useState("all");
 
   return (
+    <>
+    <Navbar />
     <div className="max-w-4xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-4">Community Eye Reports</h2>
       <select
@@ -54,6 +57,7 @@ const ReportsFeed = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

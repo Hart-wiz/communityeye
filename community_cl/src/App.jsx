@@ -9,7 +9,7 @@ import EarlyWarnings from "./components/Report/EarlyWarnings";
 import MissingPersonForm from "./components/Report/MissingPersonForm";
 import WantedPersonForm from "./components/Report/WantedPersonForm";
 import NotificationPanel from "./components/Notification/NotificationPanel";
-import ExploreCommunity from './components/Explorecommunity/ExploreCommunity';
+import ExploreCommunity from './components/Explorecommunity/Explorecommunity';
 import AuthForm from './pages/AuthForms';
 
 import Homepage from "./pages/Homepage";
