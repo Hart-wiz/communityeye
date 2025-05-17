@@ -4,6 +4,7 @@ import MapPreview from "../components/MapPreview";
 import Highlights from '../components/Highlights';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer'
+import RecentReports from '../components/RecentReports';
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Navbar/>
         <Hero/>
         <Highlights/>
+        <RecentReports/>
         <MapPreview/>
         <Footer/>
       
