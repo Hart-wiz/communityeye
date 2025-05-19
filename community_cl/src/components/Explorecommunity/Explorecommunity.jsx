@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import Navbar from '../Navbar/Navbar';  
 
 // Import marker images for React/ESM setup
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -56,6 +57,8 @@ export default function ExploreCommunity() {
     : [5.106, 7.366]; // Default to Aba South
 
   return (
+    <>
+    <Navbar/>
     <div className="p-6 max-w-4xl mx-auto space-y-4">
       <h2 className="text-2xl font-semibold text-center">Explore Community Reports</h2>
 
@@ -110,5 +113,6 @@ export default function ExploreCommunity() {
         )}
       </MapContainer>
     </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 
 const challengesData = {
   PowerSupply: {
@@ -171,6 +172,8 @@ const ReportForm = () => {
   console.log(imageFile);
 
   return (
+    <>
+    <Navbar />
     <form className="max-w-md mx-auto p-4 bg-white rounded-md shadow-md space-y-4">
       <h2 className="text-xl font-semibold text-center">
         Report a Failed Project
@@ -284,6 +287,7 @@ const ReportForm = () => {
         Submit Report
       </button>
     </form>
+    </>
   );
 };
 

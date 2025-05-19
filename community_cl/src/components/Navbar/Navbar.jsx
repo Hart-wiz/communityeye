@@ -157,11 +157,11 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className={`fixed items-center justify-center top-0 left-0 w-full z-50 bg-white ${isScrolled ? "shadow-md" : ""}`}>
+    <nav className={` items-center justify-center top-0 left-0 w-full z-50 bg-white ${isScrolled ? "shadow-md" : ""}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full text-lg font-bold">
+          <div className="w-15 h-15 text-white flex items-center justify-center rounded-full text-lg font-bold">
             <img src={logoimg} alt="" />
           </div>
           <span className="text-xl font-semibold text-gray-800">Community Eye</span>
@@ -179,11 +179,13 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center text-gray-700 font-medium">
           {[
-            { path: "/report", label: "Report" },
-            { path: "/dashboard", label: "Map" },
-            { path: "/locator", label: "Find Ward" },
-            { path: "/about", label: "About" },
-            { path: "/contact", label: "Contact" },
+            { path: "/ReportForm", label: "Report" },
+            { path: "/ExploreCommunity", label: "ExploreCommunity" },
+            { path: "/ReportsFeed", label: "Reports Feed" },
+            { path: "/wanted-person", label: "wanted-person" },
+              { path: "/missing-person", label: "missing-person" },
+              { path: "/EarlyWarnings", label: "EarlyWarnings" },
+            
           ].map(({ path, label }) => (
             <Link
               key={path}
@@ -195,15 +197,15 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
-          <Link to="/signup" className="nav_button text-blue-600 hover:underline">Sign Up</Link>
-          <Link to="/login" className="nav_buttons text-gray-600 hover:underline">Login</Link>
+          <Link to="/auth" className="nav_button text-blue-600 hover:underline">Sign Up</Link>
+          <Link to="/auth" className="nav_buttons text-gray-600 hover:underline">Login</Link>
           
         </div>
 
         {/* Mobile Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-100 ${
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-1000 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -215,13 +217,16 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col gap-4 p-4 text-gray-700 font-medium">
             {[
-              { path: "/report", label: "Report" },
-              { path: "/dashboard", label: "Map" },
-              { path: "/locator", label: "Find Ward" },
-              { path: "/about", label: "About" },
-              { path: "/contact", label: "Contact" },
-              { path: "/signup", label: "Sign Up", style: "text-blue-600" },
-              { path: "/login", label: "Login" },
+              { path: "/ReportForm", label: "Report" },
+              { path: "/ExploreCommunity", label: "ExploreCommunity" },
+              { path: "/ReportsFeed", label: "Reports Feed" },
+              { path: "/wanted-person", label: "wanted-person" },
+              { path: "/missing-person", label: "missing-person" },
+              { path: "/EarlyWarnings", label: "EarlyWarnings" },
+             
+              { path: "/auth", label: "Sign Up", style: "text-blue-600" },
+              { path: "/auth", label: "Login" },
+
             ].map(({ path, label, style }) => (
               <Link
                 key={path}

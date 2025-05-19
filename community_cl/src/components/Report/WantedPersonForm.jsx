@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 
 const WantedPersonForm = () => {
   const [fullName, setFullName] = useState("");
@@ -25,6 +26,8 @@ const WantedPersonForm = () => {
   };
 
   return (
+    <>
+      <Navbar />
     <form
       onSubmit={handleSubmit}
       className="max-w-md mx-auto p-4 bg-white rounded-md shadow-md space-y-4"
@@ -79,6 +82,7 @@ const WantedPersonForm = () => {
         Submit Report
       </button>
     </form>
+    </>
   );
 };
 
